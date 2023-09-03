@@ -41,3 +41,9 @@ docker container stop testtext
 # To remove container:
 docker rm testtext
 
+# To run without docker:
+uvicorn main:app --port 5000 --reload
+# Doc:
+http://127.0.0.1:5000/doc
+Api:
+http://127.0.0.1:5000/testtext
