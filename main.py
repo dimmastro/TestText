@@ -7,7 +7,7 @@ from PyPDF2 import PdfReader
 import io
 
 
-openai.api_key = "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"
+openai.api_key = ""
 MAX_RETRIES = 50
 RETRY_DELAY = 30  # Delay in seconds between retries
 
