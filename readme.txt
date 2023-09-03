@@ -27,9 +27,11 @@ json:
 
 # Installation:
 git clone https://github.com/dimmastro/TestText.git
+# Fill api key in maim.py:
+openai.api_key = ""
+# Build and run docker:
 docker build --tag testtext .
-docker run -d -p 8000:5000 --name testtext testtext
-docker run -d -p 8000:5000 testtext
+docker run -d -p 8000:8000 --name testtext testtext
 
 # Doc:
 http://127.0.0.1:8000/doc
@@ -43,8 +45,9 @@ docker container stop testtext
 docker rm testtext
 
 # To run without docker:
-uvicorn main:app --port 5000 --reload
+pip install -r requirements.txt
+uvicorn app.main:app --port 8000 --reload
 # Doc:
-http://127.0.0.1:5000/doc
+http://127.0.0.1:8000/doc
 Api:
-http://127.0.0.1:5000/testtext
+http://127.0.0.1:8000/testtext
