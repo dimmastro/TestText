@@ -26,7 +26,7 @@ json:
       ]
 
 # Installation:
-https://github.com/dimmastro/TestText.git
+git clone https://github.com/dimmastro/TestText.git
 docker build --tag testtext .
 docker run -d -p 5000:8000 --name testtext testtext
 
