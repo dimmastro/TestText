@@ -34,7 +34,7 @@ docker build --tag testtext .
 docker run -d -p 8000:8000 --name testtext testtext
 
 # Doc:
-http://127.0.0.1:8000/doc
+http://127.0.0.1:8000/docs
 Api:
 http://127.0.0.1:8000/testtext
 
@@ -48,6 +48,6 @@ docker rm testtext
 pip install -r requirements.txt
 uvicorn app.main:app --port 8000 --reload
 # Doc:
-http://127.0.0.1:8000/doc
+http://127.0.0.1:8000/docs
 Api:
 http://127.0.0.1:8000/testtext
