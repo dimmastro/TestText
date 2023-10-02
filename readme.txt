@@ -27,8 +27,9 @@ json:
 
 # Installation:
 git clone https://github.com/dimmastro/TestText.git
-# Fill api key in maim.py:
-openai.api_key = ""
+
+# Rename openai_api.key.tmp to openai_api.key and save openAI API key to this file.
+
 # Build and run docker:
 docker build --tag testtext .
 docker run -d -p 8000:8000 --name testtext testtext

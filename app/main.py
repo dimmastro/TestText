@@ -8,6 +8,18 @@ import io
 
 
 openai.api_key = ""
+try:
+    with open('../openai_api.key', 'r') as file:
+        openai.api_key = file.read().strip()
+    if not openai.api_key:
+        raise ValueError("File openai_api.key is empty.")
+    # print(openai.api_key)
+except FileNotFoundError:
+    print("File openai_api.key not founded.")
+except ValueError as e:
+    print(f"Error: {e}")
+
+
 MAX_RETRIES = 50
 RETRY_DELAY = 30  # Delay in seconds between retries
 
