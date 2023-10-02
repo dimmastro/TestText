@@ -9,7 +9,7 @@ import io
 
 openai.api_key = ""
 try:
-    with open('../openai_api.key', 'r') as file:
+    with open('openai_api.key', 'r') as file:
         openai.api_key = file.read().strip()
     if not openai.api_key:
         raise ValueError("File openai_api.key is empty.")
